@@ -1,0 +1,179 @@
+﻿@{
+    
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="conditional.js"></script>
+        <script src="parsley.js"></script>
+        <link rel="stylesheet" type="text/css" href="~/elegantform.css" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+        <title>Departing Employee Information</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    </head>
+        <h1><img src="images/CPblack.png" alt="logo" height="30" width="150" /><br />Departing Employee Information</h1>
+    <body>
+    <form method="POST" action="" onsubmit="" language="" name="" onsubmit="" id="employee" data-parsley-validate=""> 
+	<div class="form-group">
+	<p name="employeename">Employee Name:<span>*</span></p>
+	<span class="icon-case"><i class="fa fa-user fa-2x"></i></span>
+	<input type="text" name="EmployeeName" required="">
+	</div>
+
+    <div class="form-group">
+	<p>Date Effective:</p>
+	<span class="icon-case"><i class="fa fa-calendar fa-2x"></i></span>
+	<input type="date" name="startdate" required="">
+	</div>
+    <table>
+        <tr>
+            <td>
+            <div class="form-group">
+	        <p name="location">Location:</p>
+	        <span class="icon-case"><i class="fa fa-map fa-2x"></i></span>
+		        <div class="styled-select">
+		        <select name="Location" required="">
+		        <option>SELECT OFFICE LOCATION</option>
+		        <option>Asheville, NC [11]</option>
+		        <option>Atlanta, GA [04]</option>
+		        <option>Austin, TX [12]</option>
+		        <option>Birmingham, AL [02]</option>
+		        <option>Boston, MA [20]</option>
+		        <option>Columbia, SC [03]</option>
+		        <option>Dallas, TX [23]</option>
+		        <option>Denver, CO [28]</option>
+		        <option>Metro DC - Fairfax, VA [06]</option>
+		        <option>Greenville, SC [17]</option>
+		        <option>Jacksonville, FL [10]</option>
+		        <option>Kansas City, MO [08]</option>
+		        <option>Los Angeles - Century City [27]</option>
+		        <option>Los Angeles - Landegger [16]</option>
+		        <option>Macon, GA [07]</option>
+		        <option>Memphis, TN [32]</option>
+		        <option>Miami, FL [34]</option>
+		        <option>Minneapolis, MN [33]</option>
+		        <option>Nashville, TN [01]</option>
+		        <option>New York, NY [29]</option>
+		        <option>Opelika, AL [26]</option>
+		        <option>Port St. Lucie, FL [15]</option>
+		        <option>Princeton, NJ [22]</option>
+		        <option>Rochester, NY [31]</option>
+		        <option>St. Louis, MO [21]</option>
+		        <option>Tampa, FL [09]</option>
+		        <option>West Point, GA [25]</option>
+		        <option>Winston Salem, NC [05]</option>
+		        </select>
+		        </div>
+	        </div>
+            </td>
+            <td>
+            <div class="form-group">
+		        <p name="emp-type">Employee Type:</p>
+	        <span class="icon-case"><i class="fa fa-users fa-2x"></i></span>
+		        <div class="styled-select">
+		        <select id="billable">
+		        <option>SELECT EMPLOYEE TYPE</option>
+		        <option>Associate - NO Bar</option>
+		        <option>Associate</option>
+		        <option>Of Counsel</option>
+		        <option>Partner</option>
+		        <option>Managing Partner</option>
+		        <option>Paralegal</option>
+		        <option>Staff</option>
+		        <option>Staff - Special</option>
+		        <option>Legal Assistant</option>
+		        <option>Law Clerk</option>
+		        <option>Summer Associate</option>
+		        <option>Temporary Employee</option>
+		        </select>
+		        </div>
+	        </div>
+          </td> 
+    </tr>
+   </table>
+    <div class="form-group">
+        <p name="reason">Reason <i>(This information is only viewable by HR)</i>:</p>
+        <table>
+            <tr>
+                <td><input type="radio" name="Reason" value="Resigned" tabindex="5"> Resigned&nbsp;&nbsp;</td>
+                <td><input type="radio" value="Terminated" name="Reason">Terminated&nbsp;&nbsp;</td>
+                <td><input type="radio" name="Reason" value="Contract Expired">Contract Expired&nbsp;&nbsp; <br></td>
+            </tr>   
+            <tr>
+                <td><input type="radio" name="Reason" value="Temporary Employment Ended">Temporary Employment Ended&nbsp;&nbsp;</td>
+                <td><input type="radio" name="Reason" value="Retired">Retired&nbsp;&nbsp;</td>
+                <td><input type="radio" name="Reason" value="Other">Other</td>
+            </tr>
+        </table>
+     <div class="form-group">
+        <p name="eligible">Eligible for re-hire <i>(This information is only viewable by HR)</i>:</p>
+        <table>
+            <tr>
+                <td><input type="radio" name="Eligible" value="Yes" tabindex="5"> Yes&nbsp;&nbsp;</td>
+                <td><input type="radio" name="Eligible" value="No">No&nbsp;&nbsp;</td>
+            </tr>   
+         </table>        
+    </div> 
+    <div class="form-group" id="comments">
+		<p><b>Comments:</b></p>
+		<textarea name="comments"></textarea>
+	</div>
+    <p align="center"><b>ATTORNEY ONLY</b></p>
+    
+    <div class="form-group">
+    <p>Firm Contact for Client Business:</p>
+	<span class="icon-case"><i class="fa fa-envelope fa-2x"></i></span>
+	<input type="text" name="startdate" required="">
+    </div>
+
+    <div class="form-group">
+    <p>Forwarding Phone:</p>
+	<span class="icon-case"><i class="fa fa-phone fa-2x"></i></span>
+	<input type="text" name="startdate" required="">
+    </div>
+
+    <div class="form-group">
+    <p>Email Reply Text (if not standard):</p>
+	<textarea name="email reply"></textarea>
+    </div>
+
+    <div class="form-group">
+        <p>Standard Reply:</p>
+	    <p><b>&lt;Attorney&gt;</b> is no longer with Constangy, Brooks, Smith & Prophete, LLP. If you have client related business, please contact <b>&lt;Firm Contact for Business&gt;</b> at <b>&lt;phone number&gt; or &lt;email address&gt;.</p>
+    </div>
+
+    <p align="center"><b>ALL EMPLOYEES</b></p>
+
+    <div class="form-group" id="propertyheld">
+	<table border="0" cellpadding="3" cellspacing="0" style="border-collapse: collapse" width="100%">
+	<tr>
+		<td width="40%" colspan="4" valign="top"><p>Firm Property held by Employee:</p>      
+		<td width="20%"><input type="checkbox" name="AAP" value="YES">&nbsp;&nbsp;Laptop</td> 
+        <td width="20%"><input type="checkbox" name="ERISA" value="YES">&nbsp;&nbsp;Access Card</td>
+        <td width="20%"><input type="checkbox" name="EXEC_Comm" value="YES">&nbsp;&nbsp;Keys</td>
+	</tr>
+    </table>
+    </div>
+
+        <div class="form-group" id="propertyheld">
+	<table border="0" cellpadding="3" cellspacing="0" style="border-collapse: collapse" width="100%">
+	<tr>
+		<td width="40%" colspan="4" valign="top"><p>Firm Property turned in:</p>      
+		<td width="20%"><input type="checkbox" name="laptop" value="YES">&nbsp;&nbsp;Laptop</td> 
+        <td width="20%"><input type="checkbox" name="accesscard" value="YES">&nbsp;&nbsp;Access Card</td> 
+        <td width="20%"><input type="checkbox" name="keys" value="YES">&nbsp;&nbsp;Keys</td>
+	</tr>
+    </table>
+    </div>
+
+    <div class="form-group">
+    <input class="form-group" type="submit" name="submit">
+    <input class="form-group" type="reset" value="Reset" name="Reset">
+    </div>
+
+    </body>
+</html>

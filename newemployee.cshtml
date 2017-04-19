@@ -1,0 +1,286 @@
+﻿@{
+   
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="conditional.js"></script>
+        <script src="parsley.js"></script>
+        <link rel="stylesheet" type="text/css" href="~/elegantform.css" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+        <title>New Employee Information</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    </head>
+        <h1><img src="images/CPblack.png" alt="logo" height="30" width="150" /><br />New Employee Information</h1>
+
+    <form method="POST" action="ProcessRequest.cshtml" onsubmit="" language="" name="" onsubmit="" id="employee" data-parsley-validate=""> 
+	<div class="form-group">
+	<p name="employeename">Employee Name:<span>*</span></p>
+	<span class="icon-case"><i class="fa fa-user fa-2x"></i></span>
+	<input type="text" name="EmployeeName" required="">
+	</div>
+	
+	<div class="form-group">
+	<p name="preferredname">Preferred Name:</p>
+	<span class="icon-case"><i class="fa fa-check-square-o fa-2x"></i></span>
+	<input type="text" name="Preferred Name"><br/>
+	</div>
+
+	<div class="form-group">
+	<p>Start Date:</p>
+	<span class="icon-case"><i class="fa fa-calendar fa-2x"></i></span>
+	<input type="date" name="startdate" required="">
+	</div>
+	
+	<div class="form-group">
+	<p>End Date:</p>
+	<span class="icon-case"><i class="fa fa-calendar-o fa-2x"></i></span>
+	<input type="date" id="enddate">
+	</div>
+	
+	<div class="form-group">
+	<table border="0" cellpadding="2" cellspacing="0" style="border-collapse: collapse" width="100%">
+	<tr>
+	<td><p>Paid By:</p></td></tr>
+	<tr>
+	<td width="50%">&nbsp;&nbsp;Firm<input type="radio" name="paidby" value="Firm" id="byfirm"></td>
+	<td width="50%"><input type="radio" name="paidby" value="Agengy" id="byagency"> &nbsp;&nbsp;Agency</td>
+	</tr>
+	</table>
+	</div>
+	
+	<table>
+		<tr>
+			<td>
+				<div class="form-group">
+				<p name="location">Location:</p>
+				<span class="icon-case"><i class="fa fa-map fa-2x"></i></span>
+					<div class="styled-select">
+					<select name="Location" required="">
+					<option>SELECT OFFICE LOCATION</option>
+					<option>Asheville, NC [11]</option>
+					<option>Atlanta, GA [04]</option>
+					<option>Austin, TX [12]</option>
+					<option>Birmingham, AL [02]</option>
+					<option>Boston, MA [20]</option>
+					<option>Columbia, SC [03]</option>
+					<option>Dallas, TX [23]</option>
+					<option>Denver, CO [28]</option>
+					<option>Metro DC - Fairfax, VA [06]</option>
+					<option>Greenville, SC [17]</option>
+					<option>Jacksonville, FL [10]</option>
+					<option>Kansas City, MO [08]</option>
+					<option>Los Angeles - Century City [27]</option>
+					<option>Los Angeles - Landegger [16]</option>
+					<option>Macon, GA [07]</option>
+					<option>Memphis, TN [32]</option>
+					<option>Miami, FL [34]</option>
+					<option>Minneapolis, MN [33]</option>
+					<option>Nashville, TN [01]</option>
+					<option>New York, NY [29]</option>
+					<option>Opelika, AL [26]</option>
+					<option>Port St. Lucie, FL [15]</option>
+					<option>Princeton, NJ [22]</option>
+					<option>Rochester, NY [31]</option>
+					<option>St. Louis, MO [21]</option>
+					<option>Tampa, FL [09]</option>
+					<option>West Point, GA [25]</option>
+					<option>Winston Salem, NC [05]</option>
+					</select>
+					</div>
+				</div>
+			</td>
+			<td>
+				<div class="form-group">
+					<p name="emp-type">Employee Type:</p>
+				<span class="icon-case"><i class="fa fa-users fa-2x"></i></span>
+					<div class="styled-select">
+					<select id="billable">
+					<option>SELECT EMPLOYEE TYPE</option>
+					<option>Associate - NO Bar</option>
+					<option>Associate</option>
+					<option>Of Counsel</option>
+					<option>Partner</option>
+					<option>Managing Partner</option>
+					<option>Paralegal</option>
+					<option>Staff</option>
+					<option>Staff - Special</option>
+					<option>Legal Assistant</option>
+					<option>Law Clerk</option>
+					<option>Summer Associate</option>
+					<option>Temporary Employee</option>
+					<option>Change in Position</option>
+					</select>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>	
+
+	
+	<table>
+		<tr>
+			<td>
+			<div class="form-group">
+			<p>Position (if Staff):</p>
+			<span class="icon-case"><i class="fa fa-sitemap fa-2x"></i></span>
+			<div class="styled-select">
+			<select id="position">
+				<option>SELECT POSITION</option>
+				<option>Accounting Specialist</option>
+				<option>Accounts Payable Clerk</option>
+				<option>Accounts Receivable Specialist</option>
+				<option>Admin Assistant</option>
+				<option>Assistant Controller</option>
+				<option>Billing Manager</option>
+				<option>Billing Specialist</option>
+				<option>Business Intake Specialist</option>
+				<option>CFO + Chief Administrator</option>
+				<option>Chief Information Officer</option>
+				<option>Chief Marketing Officer</option>
+				<option>Client Intake Specialist</option>
+				<option>Controller</option>
+				<option>Copy Center Manager</option>
+				<option>Director of Human Resources</option>
+				<option>Enterprise Applications Specialist</option>
+				<option>Facilities Manager</option>
+				<option>File Clerk</option>
+				<option>Finance and Reporting Systems Manager</option>
+				<option>HR Assistant</option>
+				<option>HR Coordinator</option>
+				<option>Human Resources Manager</option>
+				<option>Immigration Clerk</option>
+				<option>IT Assistant</option>
+				<option>IT Manager</option>
+				<option>IT Support Specialist</option>
+				<option>Law Clerk</option>
+				<option>Litigation Support Analyst</option>
+				<option>Marketing Assistant</option>
+				<option>Marketing Coordinator</option>
+				<option>National Public Relations Manager</option>
+				<option>Office Manager</option>
+				<option>Receptionist - Legal Assistant</option>
+				<option>Records Specialist - Librarian</option>
+				<option>Senior Marketing Coordinator</option>
+				<option>Summer Associate</option>
+				<option>Technology Trainer & Support Specialist</option>
+				<option>Temporary Employee</option>
+                <option>Other (List Position in Comments)</option>
+			</select>
+			</div>
+			</div>
+			</td>
+			<td>
+				<div class="form-group">
+				<p>Practice Group: (if Attorney)</p>
+				<span class="icon-case"><i class="fa fa-balance-scale fa-2x"></i></span>
+				<div class="styled-select">
+				<select id="practicegroup">
+				<option>SELECT PRACTICE GROUP</option>
+				<option>AAP [300]</option>
+				<option>ERISA [200]</option>
+				<option>Immigration [100]</option>
+				<option>Litigation [400]</option>
+				<option>OSHA [500]</option>
+				<option>Traditional [600]</option>
+				<option>Wage and Hour [700]</option>
+				<option>Workers Compensation [800]</option>
+				</select>
+				</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+	
+	<div class="form-group">	
+	<p>Standard Billing Rate:</p>
+	<span class="icon-case"><i class="fa fa-dollar fa-2x"></i></span>
+	<input type="number" id="billingrate">/hr
+	</div>
+	<div class="form-group">
+	<p>Retainer Billing Rate:</p>
+	<span class="icon-case"><i class="fa fa-money fa-2x"></i></span>
+	<input type="number" id="retainerrate">/hr
+	</div>
+
+
+	<div class="form-group">
+	<p>Attorney's Assignment:</p>
+	<span class="icon-case"><i class="fa fa-users fa-2x"></i></span>
+	<input type="text" id="attorneyassignment">
+	</div>
+
+	<div class="form-group">
+	<p>Attorney's Assistant:</p>
+	<span class="icon-case"><i class="fa fa-user-plus fa-2x"></i></span>
+	<input type="text" id="attorneyassistant">
+	</div>
+	
+    <fieldset id="computer">
+	    <div class="form-group">
+		    <p>What type of computer will the new employee use?</p>
+		    <div>
+		    <table border="0" cellpadding="2" cellspacing="0" style="border-collapse: collapse" width="50%">
+		    <tr>
+		    <td width="50%"><input type="radio" name="computer" value="Desktop"><label for="Desktop">&nbsp;&nbsp;Desktop</label></td>
+		    <td width="50%"><input type="radio" name="computer" value="Laptop"><label for="Laptop">&nbsp;&nbsp;Laptop</label></td>
+		    </tr></table>
+		    </div>
+	    </div>
+	    <div class="form-group">
+    <p><b>Please note:</b><br> The Information Technology department needs a minimum of five (5) business days notice regarding equipment needed for te new employee
+			    to ensure timely arrival.</p> 
+	    </div>		
+    </fieldset>
+
+	<div class="form-group" id="comments">
+		<p><b>Comments:</b></p>
+		<textarea name="comments" placeholder="Please include any special requests such as digital dictation, software, headsets, etc."></textarea>
+	</div>
+	
+	<div class="form-group" id="emailgroups">
+	<p><b>Employee Email Groups:</b><br> Employees will autmoatically be added to the appropriate e-mail groups by position and location. However, there are a few non-standard
+e-mail groups that they may need to be added. Please check the box for any of the following groups that are applicable:</p>
+	<table border="0" cellpadding="3" cellspacing="0" style="border-collapse: collapse" width="100%">
+	<tr>
+		<td width="50%"><input type="checkbox" name="AAP" value="YES">&nbsp;&nbsp;Affirmative Action (AAP)</td>
+		<td width="50%"><input type="checkbox" name="ERISA" value="YES">&nbsp;&nbsp;ERISA</td>
+	</tr>
+	<tr>
+		<td width="50%"><input type="checkbox" name="EXEC_Comm" value="YES">&nbsp;&nbsp;Executive Committee</td>
+		<td width="50%"><input type="checkbox" name="Healthcare" value="YES">&nbsp;&nbsp;Healthcare</td>
+	</tr>
+	<tr>
+		<td width="50%"><input type="checkbox" name="Immigration" value="YES">&nbsp;&nbsp;Immigration</td>
+		<td width="50%"><input type="checkbox" name="Litigation" value="YES">&nbsp;&nbsp;Litigation</td>
+	</tr>
+	<tr>
+		<td width="50%"><input type="checkbox" name="Managing_Members" value="YES">&nbsp;&nbsp;Managing Members</td>
+		<td width="50%"><input type="checkbox" name="Office_Heads" value="YES">&nbsp;&nbsp;Office Heads</td>
+	</tr>
+	<tr>
+		<td width="50%"><input type="checkbox" name="OSHA" value="YES">&nbsp;&nbsp;OSHA</td>
+		<td width="50%"><input type="checkbox" name="PIC_Comm" value="YES">&nbsp;&nbsp;PIC Committee</td>
+	</tr>
+	<tr>
+		<td width="50%"><input type="checkbox" name="Strategic_Comm" value="YES">&nbsp;&nbsp;Strategic Committee</td>
+		<td width="50%"><input type="checkbox" name="Traditional" value="YES">&nbsp;&nbsp;Traditional</td>
+	</tr>
+	<tr>
+		<td width="50%"><input type="checkbox" name="WAGE_HOUR" value="YES">&nbsp;&nbsp;Wage & Hour</td>
+		<td width="50%"><input type="checkbox" name="Workers_Comp" value="YES">&nbsp;&nbsp;Workers Compensation</td>
+	</tr>
+    </table>
+    </div>
+    <div class="form-group">
+    <input class="form-group" type="submit" name="submit">
+    <input class="form-group" type="reset" value="Reset" name="Reset">
+    </div>
+
+</form>
+</body>
+</html>

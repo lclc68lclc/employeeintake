@@ -1,0 +1,35 @@
+﻿@{
+    var employeename = Request.Form["EmployeeName"];
+	var startdate = Request.Form["startdate"];
+	var location = Request.Form["location"];
+    var newbody = "<b>Name: </b>" + employeename + "<br />" + "Start Date: " + startdate + "<br />" + "Location: " + location;
+	var errorMessage = ""	;
+    var debuggingFlag = false;
+    try{
+        // Initialize WebMail helper
+        WebMail.SmtpServer = "FRM-CASA.constangy.corp";
+        WebMail.SmtpPort = 25;
+        WebMail.UserName = "wclark@constangy.com";
+        WebMail.Password = "sh!turbd1m3";
+        WebMail.From = "wclark@constangy.com";
+
+        // Send email
+        WebMail.Send("wclark@constangy.com", "New Employee Notification", newbody);
+        }
+    catch (Exception ex ) {
+        errorMessage = ex.Message;
+    }
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>New Employee Information</title>
+    </head>
+    <body>
+        <p>Thanks for your submission.</p>
+        <p>You've input:@newbody</p>
+    </body>
+</html>

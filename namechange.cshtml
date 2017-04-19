@@ -1,0 +1,89 @@
+﻿@{
+    
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="conditional.js"></script>
+        <script src="parsley.js"></script>
+        <link rel="stylesheet" type="text/css" href="~/elegantform.css" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+        <title>Employee Name Change</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    </head>
+        <h1><img src="images/CPblack.png" alt="logo" height="30" width="150" /><br />Name Change - Employee Information</h1>
+    <body>
+        <form method="POST" action="" onsubmit="" language="" name="" onsubmit="" id="employee" data-parsley-validate=""> 
+	<div class="form-group">
+	<p name="employeename">Employee Name:<span>*</span></p>
+	<span class="icon-case"><i class="fa fa-user fa-2x"></i></span>
+	<input type="text" name="EmployeeName" required="">
+	</div>
+	
+	<div class="form-group">
+	<p name="preferredname">New Name:</p>
+	<span class="icon-case"><i class="fa fa-check-square-o fa-2x"></i></span>
+	<input type="text" name="Preferred Name"><br/>
+	</div>
+
+	<div class="form-group">
+	<p>Date Effective:</p>
+	<span class="icon-case"><i class="fa fa-calendar fa-2x"></i></span>
+	<input type="date" name="startdate" required="">
+	</div>
+	
+
+	<div class="form-group">
+	<p name="location">Location:</p>
+	<span class="icon-case"><i class="fa fa-map fa-2x"></i></span>
+		<div class="styled-select">
+		<select name="Location" required="">
+		<option>SELECT OFFICE LOCATION</option>
+		<option>Asheville, NC [11]</option>
+		<option>Atlanta, GA [04]</option>
+		<option>Austin, TX [12]</option>
+		<option>Birmingham, AL [02]</option>
+		<option>Boston, MA [20]</option>
+		<option>Columbia, SC [03]</option>
+		<option>Dallas, TX [23]</option>
+		<option>Denver, CO [28]</option>
+		<option>Metro DC - Fairfax, VA [06]</option>
+		<option>Greenville, SC [17]</option>
+		<option>Jacksonville, FL [10]</option>
+		<option>Kansas City, MO [08]</option>
+		<option>Los Angeles - Century City [27]</option>
+		<option>Los Angeles - Landegger [16]</option>
+		<option>Macon, GA [07]</option>
+		<option>Memphis, TN [32]</option>
+		<option>Miami, FL [34]</option>
+		<option>Minneapolis, MN [33]</option>
+		<option>Nashville, TN [01]</option>
+		<option>New York, NY [29]</option>
+		<option>Opelika, AL [26]</option>
+		<option>Port St. Lucie, FL [15]</option>
+		<option>Princeton, NJ [22]</option>
+		<option>Rochester, NY [31]</option>
+		<option>St. Louis, MO [21]</option>
+		<option>Tampa, FL [09]</option>
+		<option>West Point, GA [25]</option>
+		<option>Winston Salem, NC [05]</option>
+		</select>
+		</div>
+	</div>
+	
+    <div class="form-group" id="comments">
+		<p><b>Comments:</b></p>
+		<textarea name="comments"></textarea>
+	</div>
+
+    <div class="form-group">
+    <input class="form-group" type="submit" name="submit">
+    <input class="form-group" type="reset" value="Reset" name="Reset">
+    </div>
+	
+    </body>
+</html>
